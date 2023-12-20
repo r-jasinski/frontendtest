@@ -1,0 +1,108 @@
+<template>
+  <main>
+    <section>
+      <div class="game">
+        <Player
+          flag="src/assets/images/flag.png "
+          image="src/assets/images/black_400.png"
+          name="Guest2939666985"
+          time="5:00"
+        />
+        <Board :on-square-select="handleSelect" />
+        <Player
+          flag="src/assets/images/flag.png "
+          image="src/assets/images/white_400.png"
+          is-player-turn
+          name="Guest2939666985"
+          time="4:58"
+        />
+        <span class="settings">
+          <GearsSVG />
+        </span>
+      </div>
+    </section>
+    <section>
+      <Sidebar :notations="notations" />
+    </section>
+  </main>
+</template>
+
+<script lang="ts">
+import Board from './components/Board.vue'
+import Player from './components/Player.vue'
+import GearsSVG from './assets/icons/gears.svg?component'
+import Sidebar from './components/Sidebar.vue'
+
+type Notation = {
+  square: number
+  notation: string
+}
+
+export default {
+  name: 'App',
+  components: { Board, Player, GearsSVG, Sidebar },
+  data() {
+    return {
+      notations: [] as Notation[]
+    }
+  },
+  methods: {
+    handleSelect(square: number) {
+      const file = String.fromCharCode(104 - ((square - 1) % 8))
+      const rank = Math.ceil(square / 8)
+      const data: Notation = { square, notation: `${file}${rank}` }
+      this.notations.push(data)
+    }
+  }
+}
+</script>
+
+<style scoped>
+main {
+  height: 100vh;
+  width: 100vw;
+  min-width: 340px;
+  display: flex;
+  place-items: center;
+  padding: 2rem;
+  gap: 34px;
+}
+section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.game {
+  height: 80%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.settings {
+  position: absolute;
+  right: 0;
+  translate: 24px;
+  opacity: 0.5;
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding: 0;
+    flex-direction: column;
+  }
+  .game {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  .settings {
+    right: 8px;
+    bottom: 0;
+    translate: 0 128px;
+    z-index: 999;
+  }
+}
+</style>
