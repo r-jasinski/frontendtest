@@ -3,17 +3,17 @@
     <section>
       <div class="game">
         <Player
-          flag="src/assets/images/flag.png "
-          image="src/assets/images/black_400.png"
+          flag="images/flag.png "
+          image="images/black_400.png"
           name="Guest2939666985"
           time="5:00"
         />
         <Board :on-square-select="handleSelect" />
         <Player
-          flag="src/assets/images/flag.png "
-          image="src/assets/images/white_400.png"
+          flag="images/flag.png "
+          image="images/white_400.png"
           is-player-turn
-          name="Guest2939666985"
+          name="Guest9241962816"
           time="4:58"
         />
         <span class="settings">

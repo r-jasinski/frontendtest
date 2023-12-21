@@ -36,7 +36,7 @@
     </div>
     <div class="chat">
       <span>NEW GAME</span>
-      <span>Guest2939666985 vs Guest2939666985 (5 min Unrated)</span>
+      <span>Guest2939666985 vs Guest9241962816 (5 min Unrated)</span>
     </div>
     <div class="chat-login">
       Please <a href="#">Sign Up</a> to use the chat.
