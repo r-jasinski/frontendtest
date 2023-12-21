@@ -89,6 +89,12 @@ export default defineComponent({
     }
   },
   methods: {
+    /**
+     * Scrolls the move list into view.
+     *
+     * This method uses the `scrollIntoView` method of the `HTMLElement` interface to scroll the move list into view.
+     * The `behavior` option is set to 'smooth', so the scrolling is done smoothly rather than instantly.
+     */
     scrollToElement() {
       ;(this.$refs.moveListRef as HTMLElement).scrollIntoView({
         behavior: 'smooth'
@@ -231,12 +237,12 @@ li:nth-last-of-type(2) span:after {
 }
 .chat {
   width: 100%;
-  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 12px;
   font-weight: 300;
+  flex-grow: 1;
 }
 .chat span:first-of-type {
   font-weight: 500;

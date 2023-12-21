@@ -9,7 +9,6 @@
       tabindex="1"
     >
     </span>
-    <GearsSVG />
   </div>
 </template>
 
@@ -20,11 +19,31 @@ export default defineComponent({
   name: 'Board',
   props: { onSquareSelect: { type: Function, required: true } },
   methods: {
-    getDataRank(square: number) {
+    /**
+     * Calculates the rank (row) of a square on the game board.
+     *
+     * @param {number} square - The number of the square. The squares are numbered from 1 to 64, starting from the top left of the board and going right and down.
+     * @returns {number|null} The rank of the square, or null if the square is not the first square of a rank.
+     *
+     * This method calculates the rank by dividing the square number by 8 and rounding up.
+     * If the square number is a multiple of 8, it means the square is the last square of a rank, so it returns the rank.
+     * Otherwise, it returns null because the square is not the first square of a rank.
+     */
+    getDataRank(square: number): number | null {
       const rank = Math.ceil(square / 8)
       return square % 8 === 0 ? rank : null
     },
-    getDataFile(square: number) {
+    /**
+     * Calculates the file (column) of a square on the game board.
+     *
+     * @param {number} square - The number of the square. The squares are numbered from 1 to 64, starting from the top left of the board and going right and down.
+     * @returns {string|null} The file of the square, or null if the square is not in the first rank.
+     *
+     * This method calculates the file by subtracting the square number from 105 and taking the remainder when divided by 8.
+     * It then converts this number to a character code to get a letter from 'a' to 'h'.
+     * If the square number is greater than 8, it means the square is not in the first rank, so it returns null.
+     */
+    getDataFile(square: number): string | null {
       return square <= 8 ? String.fromCharCode(104 - ((square - 1) % 8)) : null
     }
   }

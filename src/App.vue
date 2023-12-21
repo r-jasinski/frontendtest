@@ -47,6 +47,16 @@ export default {
     }
   },
   methods: {
+    /**
+     * Handles the selection of a square on the game board.
+     *
+     * @param {number} square - The number of the square that was selected.
+     * The squares are numbered from 1 to 64, starting from the top left of the board and going right and down.
+     *
+     * This method calculates the file (column) and rank (row) of the selected square in standard chess notation.
+     * The file is a letter from 'a' to 'h' and the rank is a number from 1 to 8.
+     * It then creates a Notation object with the square number and its notation, and adds it to the notations array.
+     */
     handleSelect(square: number) {
       const file = String.fromCharCode(104 - ((square - 1) % 8))
       const rank = Math.ceil(square / 8)
