@@ -1,4 +1,4 @@
-# Player.vue
+# PlayerTag.vue
 
 This Vue component represents a player in the game. It is responsible for rendering the player's image, flag, name, and time.
 

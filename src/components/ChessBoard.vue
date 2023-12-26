@@ -1,12 +1,12 @@
 <template>
-  <div class="board" @keydown.prevent tabindex="0">
+  <div class="board" tabindex="0" @keydown.prevent>
     <span
       v-for="i in Array.from({ length: 64 }, (_, i) => 64 - i)"
+      :key="i"
       :data-file="getDataFile(i)"
       :data-rank="getDataRank(i)"
-      :key="i"
-      @click="onSquareSelect(i)"
       tabindex="1"
+      @click="onSquareSelect(i)"
     >
     </span>
   </div>
@@ -16,7 +16,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Board',
+  name: 'ChessBoard',
   props: { onSquareSelect: { type: Function, required: true } },
   methods: {
     /**

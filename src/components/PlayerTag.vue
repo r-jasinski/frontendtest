@@ -25,7 +25,7 @@ import { defineComponent } from 'vue'
 import ClockSVG from '../assets/icons/clock.svg?component'
 
 export default defineComponent({
-  name: 'Player',
+  name: 'PlayerTag',
   components: { ClockSVG },
   props: {
     flag: { type: String, required: true },

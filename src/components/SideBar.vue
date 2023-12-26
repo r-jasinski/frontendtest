@@ -10,7 +10,7 @@
         New Game
       </span>
       <span>
-        <BoardSVG />
+        <ChessBoardSVG />
         Games
       </span>
       <span>
@@ -24,8 +24,11 @@
     </div>
     <div class="move-list">
       <ol>
-        <li v-for="({ notation }, index) in notations" :key="`${index + 1}-${notation}`">
-          <span>{{notation}}</span>
+        <li
+          v-for="({ notation }, index) in notations"
+          :key="`${index + 1}-${notation}`"
+        >
+          <span>{{ notation }}</span>
         </li>
         <li ref="moveListRef"></li>
       </ol>
@@ -45,8 +48,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import BoardSVG from '../assets/icons/board.svg?component'
+import { defineComponent, PropType } from 'vue'
+import ChessBoardSVG from '../assets/icons/board.svg?component'
 import BookSVG from '../assets/icons/book.svg?component'
 import CompassSVG from '../assets/icons/compass.svg?component'
 import FirstSVG from '../assets/icons/first.svg?component'
@@ -60,10 +63,12 @@ import PlayersSVG from '../assets/icons/players.svg?component'
 import PreviousSVG from '../assets/icons/previous.svg?component'
 import TimerSVG from '../assets/icons/timer.svg?component'
 
+import { Notation } from '../App.vue'
+
 export default defineComponent({
-  name: 'Sidebar',
+  name: 'SideBar',
   components: {
-    BoardSVG,
+    ChessBoardSVG,
     BookSVG,
     CompassSVG,
     FirstSVG,
@@ -78,7 +83,7 @@ export default defineComponent({
     TimerSVG
   },
   props: {
-    notations: { type: Array, required: true }
+    notations: Array as PropType<Notation[]>
   },
   watch: {
     notations: {

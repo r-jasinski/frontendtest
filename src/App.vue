@@ -2,14 +2,14 @@
   <main>
     <section>
       <div class="game">
-        <Player
+        <PlayerTag
           flag="images/flag.png "
           image="images/black_400.png"
           name="Guest2939666985"
           time="5:00"
         />
-        <Board :on-square-select="handleSelect" />
-        <Player
+        <ChessBoard :on-square-select="handleSelect" />
+        <PlayerTag
           flag="images/flag.png "
           image="images/white_400.png"
           is-player-turn
@@ -22,25 +22,25 @@
       </div>
     </section>
     <section>
-      <Sidebar :notations="notations" />
+      <SideBar :notations="notations" />
     </section>
   </main>
 </template>
 
 <script lang="ts">
-import Board from './components/Board.vue'
-import Player from './components/Player.vue'
+import ChessBoard from './components/ChessBoard.vue'
+import PlayerTag from './components/PlayerTag.vue'
 import GearsSVG from './assets/icons/gears.svg?component'
-import Sidebar from './components/Sidebar.vue'
+import SideBar from './components/SideBar.vue'
 
-type Notation = {
+export type Notation = {
   square: number
   notation: string
 }
 
 export default {
   name: 'App',
-  components: { Board, Player, GearsSVG, Sidebar },
+  components: { ChessBoard, PlayerTag, GearsSVG, SideBar },
   data() {
     return {
       notations: [] as Notation[]

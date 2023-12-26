@@ -1,4 +1,4 @@
-# Sidebar.vue
+# SideBar.vue
 
 This Vue component represents the sidebar of the application. It is responsible for rendering the notations and scrolling the move list into view when a new move is made.
 

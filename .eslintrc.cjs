@@ -1,13 +1,17 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
-  env: {
-    'cypress/globals': true,
+  root: true,
+  extends: [
+    'plugin:vue/vue3-essential',
+    'eslint:recommended',
+    '@vue/eslint-config-typescript',
+    '@vue/eslint-config-prettier/skip-formatting'
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest'
   },
-  plugins: ['vue', 'prettier-vue', 'cypress'],
-  globals: {
-    describe: 'readonly',
-    it: 'readonly',
-  },
-  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'plugin:prettier-vue/recommended', '@vue/eslint-config-typescript', '@vue/eslint-config-prettier', 'plugin:storybook/recommended'],
   rules: {
     'prettier/prettier': [
       'warn',

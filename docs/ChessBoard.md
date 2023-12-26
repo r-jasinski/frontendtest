@@ -1,4 +1,4 @@
-# Board.vue
+# ChessBoard.vue
 
 This Vue component represents the game board. It is responsible for rendering the squares of the board and handling the selection of a square.
 

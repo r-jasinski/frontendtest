@@ -1,12 +1,12 @@
 import '../style.css'
-import Board from '../components/Board.vue'
+import ChessBoard from '../components/ChessBoard.vue'
 import type { Meta } from '@storybook/vue3'
 
 const meta = {
-  title: 'Board',
-  component: Board,
+  title: 'ChessBoard',
+  component: ChessBoard,
   tags: ['autodocs']
-} satisfies Meta<typeof Board>
+} satisfies Meta<typeof ChessBoard>
 
 export default meta
 export const Default = {}

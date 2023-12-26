@@ -1,12 +1,12 @@
 import '../style.css'
-import Sidebar from '../components/Sidebar.vue'
+import SideBar from '../components/SideBar.vue'
 import type { Meta } from '@storybook/vue3'
 
 const meta = {
-  title: 'Sidebar',
-  component: Sidebar,
+  title: 'SideBar',
+  component: SideBar,
   tags: ['autodocs']
-} satisfies Meta<typeof Sidebar>
+} satisfies Meta<typeof SideBar>
 
 export default meta
 export const Default = {

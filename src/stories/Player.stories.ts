@@ -1,12 +1,12 @@
 import '../style.css'
-import Player from '../components/Player.vue'
+import PlayerTag from '../components/PlayerTag.vue'
 import type { Meta } from '@storybook/vue3'
 
 const meta = {
-  title: 'Player',
-  component: Player,
+  title: 'PlayerTag',
+  component: PlayerTag,
   tags: ['autodocs']
-} satisfies Meta<typeof Player>
+} satisfies Meta<typeof PlayerTag>
 
 export default meta
 export const Default = {
