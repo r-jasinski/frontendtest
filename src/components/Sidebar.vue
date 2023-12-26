@@ -78,7 +78,7 @@ export default defineComponent({
     TimerSVG
   },
   props: {
-    notations: { type: Object, required: true }
+    notations: { type: Array, required: true }
   },
   watch: {
     notations: {

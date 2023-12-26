@@ -8,7 +8,7 @@ The template structure is not included in the provided code snippet.
 
 ## Props
 
-- `notations`: An object that contains the notations. It is required.
+- `notations`: An array that contains the notations. It is required.
 
 ## Watchers
 
