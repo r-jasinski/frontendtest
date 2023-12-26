@@ -24,8 +24,8 @@
     </div>
     <div class="move-list">
       <ol>
-        <li v-for="{ notation } in notations" :key="notation">
-          <span>{{ notation }}</span>
+        <li v-for="({ notation }, index) in notations" :key="`${index + 1}-${notation}`">
+          <span>{{notation}}</span>
         </li>
         <li ref="moveListRef"></li>
       </ol>
