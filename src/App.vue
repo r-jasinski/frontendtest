@@ -8,7 +8,7 @@
           name="Guest2939666985"
           time="5:00"
         />
-        <ChessBoard :on-square-select="handleSelect" />
+        <ChessBoard @squareSelect="handleSelect" />
         <PlayerTag
           flag="images/flag.png "
           image="images/white_400.png"

@@ -4,11 +4,11 @@ This Vue component represents the game board. It is responsible for rendering th
 
 ## Template Structure
 
-The template contains a div with a class of "board". Each span represents a square on the board and has a click event listener that calls the `onSquareSelect` method with the index of the square.
+The template contains a div with a class of "board". Each span represents a square on the board and has a click event listener that emits a custom event and the index of the square.
 
-## Props
+## Custom Events
 
-- `onSquareSelect`: A function that is called when a square is selected. It is required.
+- `square-select`: An event that has as payload the square number.
 
 ## Methods
 

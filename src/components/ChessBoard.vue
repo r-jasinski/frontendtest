@@ -1,12 +1,12 @@
 <template>
   <div class="board" tabindex="0" @keydown.prevent>
     <span
-      v-for="i in Array.from({ length: 64 }, (_, i) => 64 - i)"
-      :key="i"
-      :data-file="getDataFile(i)"
-      :data-rank="getDataRank(i)"
+      :data-file="getDataFile(index)"
+      :data-rank="getDataRank(index)"
+      :key="index"
+      @click="$emit('square-select', index)"
       tabindex="1"
-      @click="onSquareSelect(i)"
+      v-for="index in Array.from({ length: 64 }, (_, index) => 64 - index)"
     >
     </span>
   </div>
@@ -17,7 +17,6 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'ChessBoard',
-  props: { onSquareSelect: { type: Function, required: true } },
   methods: {
     /**
      * Calculates the rank (row) of a square on the game board.
