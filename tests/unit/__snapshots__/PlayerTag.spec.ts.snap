@@ -1,0 +1,63 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Player.vue > should match snapshot 1`] = `
+<div
+  class="player"
+  data-v-a6c9493b=""
+>
+  <div
+    class="tagline"
+    data-v-a6c9493b=""
+  >
+    <img
+      alt="Player image"
+      data-v-a6c9493b=""
+      src="https://i.imgur.com/image.png"
+    />
+    <div
+      class="user-tagline"
+      data-v-a6c9493b=""
+    >
+      <span
+        data-v-a6c9493b=""
+      >
+        Guest9241962816
+      </span>
+      <img
+        alt="Player flag"
+        data-v-a6c9493b=""
+        src="https://i.imgur.com/flag.png"
+      />
+      <ul
+        data-v-a6c9493b=""
+      >
+        <li
+          data-v-a6c9493b=""
+        />
+        <li
+          data-v-a6c9493b=""
+        />
+        <li
+          data-v-a6c9493b=""
+        />
+        <li
+          data-v-a6c9493b=""
+        />
+      </ul>
+    </div>
+  </div>
+  <div
+    class="clock"
+    data-v-a6c9493b=""
+  >
+    </src/assets/icons/clock.svg?component
+      data-v-a6c9493b=""
+    />
+    <span
+      data-v-a6c9493b=""
+    >
+      4:58
+    </span>
+  </div>
+</div>
+`;
