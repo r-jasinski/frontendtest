@@ -29,8 +29,9 @@ export default defineComponent({
      * Otherwise, it returns null because the square is not the first square of a rank.
      */
     getDataRank(square: number): number | null {
-      const rank = Math.ceil(square / 8)
-      return square % 8 === 0 ? rank : null
+      if (square % 8 !== 0) return null
+      const rank = square / 8
+      return rank
     },
     /**
      * Calculates the file (column) of a square on the game board.
@@ -43,7 +44,9 @@ export default defineComponent({
      * If the square number is greater than 8, it means the square is not in the first rank, so it returns null.
      */
     getDataFile(square: number): string | null {
-      return square <= 8 ? String.fromCharCode(104 - ((square - 1) % 8)) : null
+      if (square > 8) return null
+      const file = String.fromCharCode(104 - (square - 1))
+      return file
     }
   }
 })
@@ -67,7 +70,7 @@ span:nth-child(24) ~ span:nth-child(-2n + 31),
 span:nth-child(32) ~ span:nth-child(-2n + 40),
 span:nth-child(40) ~ span:nth-child(-2n + 47),
 span:nth-child(48) ~ span:nth-child(-2n + 56),
-span:nth-child(56) ~ span:nth-child(-2n + 65) {
+span:nth-child(56) ~ span:nth-child(-2n + 63) {
   background-color: var(--color-green-300);
   color: var(--color-gray-300);
 }

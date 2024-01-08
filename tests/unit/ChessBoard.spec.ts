@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import Board from '../../src/components/ChessBoard.vue'
+import ChessBoard from '../../src/components/ChessBoard.vue'
 
 describe('Board.vue', () => {
-  const wrapper = mount(Board)
+  const wrapper = mount(ChessBoard)
   it('should render board squares', () => {
     expect(wrapper.findAll('.board span')).toHaveLength(64)
   })

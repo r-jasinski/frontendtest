@@ -29,8 +29,8 @@
 
 <script lang="ts">
 import ChessBoard from './components/ChessBoard.vue'
-import PlayerTag from './components/PlayerTag.vue'
 import GearsSVG from './assets/icons/gears.svg?component'
+import PlayerTag from './components/PlayerTag.vue'
 import SideBar from './components/SideBar.vue'
 
 export type Notation = {

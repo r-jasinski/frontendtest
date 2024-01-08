@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import Player from '../../src/components/PlayerTag.vue'
+import PlayerTag from '../../src/components/PlayerTag.vue'
 
-describe('Player.vue', () => {
-  const wrapper = mount(Player, {
+describe('PlayerTag.vue', () => {
+  const wrapper = mount(PlayerTag, {
     propsData: {
       flag: 'https://i.imgur.com/flag.png',
       image: 'https://i.imgur.com/image.png',
