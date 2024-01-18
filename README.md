@@ -1,5 +1,11 @@
 # Chess.com - Front End Programming Challenge
 
+
+
+[Design and basic design tokens (Figma)](https://www.figma.com/file/A2y1tzcBWmJQT3DM5RHBqO/Chess.com?type=design&node-id=0%3A1&mode=design&t=SSgaiLveTeEdY0j4-1)
+
+[Demo (GitHub Pages)](https://r-jasinski.github.io/frontendtest/)
+
 Welcome to the [Chess.com](https://chess.com) front end programming challenge!
 
 # Instructions
